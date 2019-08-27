@@ -1,0 +1,58 @@
+[
+  {
+    "caseId": "1",
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Location": "12345.45,456.345",
+    "Status": "green"
+  },
+  {
+    "caseId": "10",
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Location": "12345.45,456.345",
+    "Status": "yellow"
+  },
+  {
+    "caseId": "1",
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Location": "12345.45,456.345",
+    "Status": "red"
+  },
+  {
+    "caseId": "1",
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Location": "12345.45,456.345",
+    "Status": "red"
+  },
+  {
+    "caseId": "1",
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Location": "12345.45,456.345",
+    "Status": "red"
+  },
+  {
+    "caseId": "1",
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Location": "12345.45,456.345",
+    "Status": "yellow"
+  },
+  {
+    "caseId": "1",
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Location": "12345.45,456.345",
+    "Status": "red"
+  }
+]

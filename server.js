@@ -5,14 +5,14 @@ var app = express();
 //set pprt
 var port = process.env.PORT || 8080;
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + "/base"));
 
 
 //routes
 
 app.get('/', function(req,res)
 {
-	res.render("index");
+	res.render("/base/index");
 });
 
 
