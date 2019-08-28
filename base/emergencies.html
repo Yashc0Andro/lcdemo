@@ -490,7 +490,8 @@
                         tr.append('<td>' + record.personalNumber + '</td>');
                         tr.append('<td>' + record.emergencyNumber + '</td>');
                         tr.append('<td> <a href="https://www.google.com/maps/search/?api=1&' + record.Location + '" target="_blank"><i class="lnr lnr-map-marker"></i> Trigger Spot</td>');
-                        tr.append('<td> <a href="appointment.html" target="_blank"><i class="lnr lnr-book"></i> Schedule Appointment</td>');
+                        tr.append('<td> <a href="patient-history.html" target="_blank"><i class="lnr lnr-book"></i> Patient History</td>');
+                        tr.append('<td> <a href="https://form.jotform.me/92388803655468" target="_blank"><i class="lnr lnr-book"></i> Book Appointment</td>');
                         tr.append('<td><span class="emrStatus ' + record.Status + '">' + (record.Status === "red" ? "Not Addressed" : record.Status === "green" ? "Admitted" : record.Status === "yellow" ? "Picked" : "") + '</span></td>');
                         table.append(tr);
                     });
