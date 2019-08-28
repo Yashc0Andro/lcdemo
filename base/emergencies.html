@@ -320,6 +320,7 @@
                             <td>Personal No</td>
                             <td>Emergency No</td>
                             <td>Location</td>
+                            <td>Medical History</td>
                             <td>Appointments</td>
                             <td>Status</td>
                         </tr>
@@ -478,7 +479,7 @@
 
             setTimeout(getEmergencies, 15000);
 
-            $.get('http://localhost:3000/getemergency', null, function (data) {
+            $.get('https://lcdemo.herokuapp.com/getemergencies', null, function (data) {
                 console.log('Get Emergency Triggered');
                 if (data.length) {
                     var table = $('#emrTable tbody');
