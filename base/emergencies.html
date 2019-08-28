@@ -479,7 +479,7 @@
 
             setTimeout(getEmergencies, 15000);
 
-            $.get('https://lcdemo.herokuapp.com/getemergencies', null, function (data) {
+            $.get('/getemergencies', null, function (data) {
                 console.log('Get Emergency Triggered');
                 if (data.length) {
                     var table = $('#emrTable tbody');

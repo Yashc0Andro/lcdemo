@@ -7,103 +7,123 @@ var port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + "/base"));
 
+var cors = require('cors');
+
+
+app.options('*', cors()); // include before other routes 
+app.use(cors());
+
 
 //routes
 
-app.get('/', function(req,res)
-{
-	res.render("/base/index");
+app.get('/', function (req, res) {
+    res.render("/base/index");
 });
 
 
-app.listen(port, function(){
-	
-	console.log("listening");
+app.listen(port, function () {
+
+    console.log("listening");
 });
 
 
 app.get('/getusers', (req, res) => {
 
     var fs = require('fs');
-    
+
     let rawdata = fs.readFileSync('users.json');
     let data = JSON.parse(rawdata);
     res.setHeader('Content-Type', 'application/json');
     res.send(data);
-    
+
 });
 
 app.get('/getemergencies', (req, res) => {
 
     var fs = require('fs');
-    
+
     let rawdata = fs.readFileSync('emergency.json');
     let data = JSON.parse(rawdata);
     res.setHeader('Content-Type', 'application/json');
     res.send(data);
-    
+
 });
 
 
 app.get('/addemergency', (req, res) => {
-	   res.setHeader('Content-Type', 'application/json');
-   // res.send(newUser);
+    res.setHeader('Content-Type', 'application/json');
+    // res.send(newUser);
     res.send('Ok');
 });
 
-app.get('/adduser', (req, res) => {
+app.get('/addOrUpdateUser', (req, res) => {
 
     var fs = require('fs');
-	const file = 'users.json';
-    
+    const file = 'users.json';
+
     let rawdata = fs.readFileSync(file);
     let usersData = JSON.parse(rawdata);
-	
-	//get data from query string
-	var query = req.query;
-    var casId = query['caseId'];
-	var uName = query['userName'];
-    var name = query['name'];
-    var number = query['number'];
-    var eNumber = query['emergencynum'];
-	var address = query['address'];
-	
-    // let newUser = {
-            // caseId: casId,
-			// userName: uName,
-            // name: name,
-            // personalNumber: number,
-            // emergencyNumber: eNumber,
-            // Address: address,
-        // };
-	
-	// //check of the record exists with username or caseId
-	// var lodash = require('lodash');
-	// var user = lodash.where(usersData, function (e) { return e.caseId === casId; });
-	// if(isEmpty(obj))
-	// {
-		// //add user
-		// userData.push(newUser);
-		
-		// var newData = JSON.stringify(userData, null, 2);
-		// fs.writeFile(file, newData, err => {
-			// if (err) console.error(err);
-			// else console.log('done');
-		// });
-		
-		
-	// }
-	
+
+    let userObj = {
+        caseId: req.query['caseId'],
+        userName: req.query['userName'],
+        name: req.query['name'],
+        personalNumber: req.query['number'],
+        emergencyNumber: req.query['emergencynum'],
+        Address: req.query['address'],
+    };
+
+    if (usersData.length) {
+        let userFound = false;
+        usersData.array.forEach(element => {
+            if (element.caseId === newUser.caseId) {
+                element = userObj;
+                userFound = true;
+                return false;
+            }
+        });
+
+        if (!userFound) {
+            usersData.push(newUser);
+        }
+    }
+
+    var saveUserData = JSON.stringify(usersData, null, 2);
+    fs.writeFile(file, saveUserData, err => {
+        if (err) console.error(err);
+        else console.log('done');
+    });
+
     res.setHeader('Content-Type', 'application/json');
-   // res.send(newUser);
+    // res.send(newUser);
     res.send('Ok');
-    
+
 });
 
-function isEmpty(obj) {
-    for (var key in obj) {
-        if (obj.hasOwnProperty(key))
-            return false;
+app.get('/deleteUser', (req, res) => {
+
+    var fs = require('fs');
+    const file = 'users.json';
+
+    let rawdata = fs.readFileSync(file);
+    let usersData = JSON.parse(rawdata);
+
+    if (usersData.length) {
+        usersData.array.forEach(element ,index => {
+            if (element.caseId === newUser.caseId) {
+                usersData.splice(index, 1);
+                return false;
+            }
+        });      
     }
-    return true;
-}
+
+    var saveUserData = JSON.stringify(usersData, null, 2);
+    fs.writeFile(file, saveUserData, err => {
+        if (err) console.error(err);
+        else console.log('done');
+    });
+
+    res.setHeader('Content-Type', 'application/json');
+    res.send('Ok');
+});
+
