@@ -192,7 +192,7 @@ function getEmergency(emgData, caseId) {
 }
 
 
-function udpateEmergency(emgData, emgObj) {
+function updateEmgStatus(emgData, emgObj) {
     for (var i = 0; i < emgData.length; i++) {
         if (emgData[i].caseId === emgObj.caseId) {
             emgData[i].Status = emgObj.Status;
@@ -206,7 +206,8 @@ app.get('/addemergency', (req, res) => {
     var emgData = getJsonData(emgJsonPath);
     var newEmg = getEmgObjFromQueryString(req.query);
 
-    var emgObj = getEmergency(newEmg.caseId);
+    var emgObj = getEmergency(emgData, newEmg.caseId);
+    console.log(emgObj);
     if (emgObj) {
         updateEmgStatus(emgData, newEmg);
         writeJsonData(emgJsonPath, emgData);
@@ -224,7 +225,7 @@ app.get('/updateemergency', (req, res) => {
     var emgData = getJsonData(emgJsonPath);
     var newEmg = getEmgObjFromQueryString(req.query);
 
-    var emgObj = getEmergency(newEmg.caseId);
+    var emgObj = getEmergency(emgData, newEmg.caseId);
 
     if (!emgObj) {
         emgData.push(newEmg);
@@ -249,13 +250,13 @@ function deleteEmergency(emgData, emgObj) {
 }
 
 
-app.get('/deletemergency', (req, res) => {
+app.get('/deleteemergency', (req, res) => {
 
     var emgData = getJsonData(emgJsonPath);
     var newEmg = getEmgObjFromQueryString(req.query);
 
 
-    var emgObj = getEmergency(newEmg.caseId);
+    var emgObj = getEmergency(emgData, newEmg.caseId);
 
     if (!emgObj) {
         res.send('Emergency request is Not Found in our system!!!');
