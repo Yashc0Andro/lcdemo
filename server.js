@@ -281,9 +281,10 @@ function deleteEmergency(emgData, emgObj) {
 app.get('/deleteemergency', (req, res) => {
 
     var emgData = getJsonData(emgJsonPath);
-    var deleteEmgCaseId = parseInt(req.query['caseId']);
+    // var deleteEmgCaseId = parseInt(req.query['caseId']);
+    var deleteEmgCaseId = req.query['caseId'];
 
-    console.log(deleteEmgCaseId)
+  //  console.log(deleteEmgCaseId)
     var emgObj = getEmergency(emgData, deleteEmgCaseId);
 
     res.header('Content-Type', 'text/plain');
