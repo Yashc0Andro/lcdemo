@@ -50,9 +50,9 @@
             padding: 7px;
         }
 
-            #emrTable tbody td:first-child {
-                font-weight: bold;
-            }
+        #emrTable tbody td:first-child {
+            font-weight: bold;
+        }
 
         #emrTable tbody tr {
             height: 50px;
@@ -65,33 +65,21 @@
             border-left: 1px solid #ccc;*/
         }
 
-            #emrTable tbody tr:hover {
-                background-color: #f5f5f5;
-            }
+        #emrTable tbody tr:hover {
+            background-color: #f5f5f5;
+        }
 
-            #emrTable tbody tr:last-child {
-                border-bottom: 1px solid #ccc;
-            }
+        #emrTable tbody tr:last-child {
+            border-bottom: 1px solid #ccc;
+        }
 
-            #emrTable tbody tr:nth-child(even) {
-                background-color: #f5f5f5;
-            }
+        #emrTable tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
 
-        /*#emrTable tbody tr td:first-child {
-                border-left: 1px solid #ccc;
-            }
-
-            #emrTable tbody tr td:last-child {
-                border-right: 1px solid #ccc;
-            }
-
-            #emrTable tbody tr:last-child td:first-child {
-                border-bottom-left-radius: 10px;
-            }
-
-            #emrTable tbody tr:last-child td:last-child {
-                border-bottom-right-radius: 10px;
-            }*/
+        span.del-button:hover {
+            cursor: pointer;
+        }
 
         #emrTable tbody span.emrStatus {
             border: 1px solid #ccc;
@@ -99,31 +87,53 @@
             border-radius: 17px;
         }
 
-            #emrTable tbody span.emrStatus:hover {
-                background-color: #12a1cf !important;
-                color: #fff;
-            }
+        #emrTable tbody span.emrStatus:hover {
+            background-color: #12a1cf !important;
+            color: #fff;
+        }
 
-            #emrTable tbody span.emrStatus.red {
-                background: red;
-                color: #fff;
-            }
-
-
-            #emrTable tbody span.emrStatus.green {
-                background: green;
-                color: #fff;
-            }
+        #emrTable tbody span.emrStatus.red {
+            background: red;
+            color: #fff;
+        }
 
 
-            #emrTable tbody span.emrStatus.yellow {
-                background: yellow;
-                color: #000;
-            }
+        #emrTable tbody span.emrStatus.green {
+            background: green;
+            color: #fff;
+        }
+
+
+        #emrTable tbody span.emrStatus.yellow {
+            background: yellow;
+            color: #000;
+        }
     </style>
 </head>
 
 <body>
+
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteEmergency(this)"
+                        id="deleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--================Header Menu Area =================-->
     <header class="header_area">
@@ -176,10 +186,11 @@
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="index.html">
-                        <img src="img/favicon.png" alt="">  <b>The Life Connect</b>
+                        <img src="img/favicon.png" alt=""> <b>The Life Connect</b>
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -199,7 +210,8 @@
                                         <a class="nav-link" href="doctors.html">Doctors</a>
                                     </li>
                                     <li class="nav-item submenu dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="about.html">About</a>
@@ -213,7 +225,8 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item submenu dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                            role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
                                                 <a class="nav-link" href="blog.html">Blog</a>
@@ -323,6 +336,7 @@
                             <td>Medical History</td>
                             <td>Appointments</td>
                             <td>Status</td>
+                            <td style="width: 30px"></td>
                         </tr>
                     </thead>
 
@@ -371,13 +385,15 @@
                         <h6>Newsletter</h6>
                         <p>You can trust us. we only send promo offers, not a single spam.</p>
                         <div id="mc_embed_signup">
-                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                  method="get" class="form-inline">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
 
                                 <div class="form-group row">
                                     <div class="col-lg-7 col-md-6 col-sm-12">
-                                        <input name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
-                                               required="" type="email">
+                                        <input name="EMAIL" placeholder="Your Email Address"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Your Email Address '" required="" type="email">
                                     </div>
 
                                     <div class="col-lg-5 col-md-12">
@@ -398,7 +414,9 @@
                 <p class="col-lg-8 col-sm-12 footer-text m-0">
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+                    made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                        target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
                 <div class="col-lg-4 col-sm-12 footer-social">
@@ -474,41 +492,54 @@
         $(function () {
             getEmergencies();
         });
+        function deleteClick(span) {
+            $('#confirmationModal').attr('data-caseId', $(span).data('caseId'));
+        }
+        function deleteEmergency(button) {
+            var caseId = $('#confirmationModal').attr('data-caseId');
+            $('#confirmationModal').modal('hide');
+            $.get('/deleteemergency?caseId=' + caseId, null, function (result) {
+                $('#emrTable tbody').find('tr[data-caseId="' + caseId + '"]').remove();
+                alert(result);
+            });
+        }
 
         function getEmergencies() {
 
-            setTimeout(getEmergencies, 15000);
+            //setTimeout(getEmergencies, 10000);
 
             $.get('/getemergencies', null, function (data) {
-                console.log('Get Emergency Triggered');
+
+                console.log('Get Emergency Triggered', data);
+
+                var table = $('#emrTable tbody');
+                table.empty();
+
                 if (data.length) {
-                    var table = $('#emrTable tbody');
-                    table.empty();
                     $.each(data, function (index, record) {
-                        var tr = $('<tr />');
+                        var tr = $('<tr />', { 'data-caseId': record.caseId });
                         tr.append('<td>' + record.caseId + '</td>');
                         tr.append('<td>' + record.name + '</td>');
                         tr.append('<td>' + record.personalNumber + '</td>');
                         tr.append('<td>' + record.emergencyNumber + '</td>');
-                        //tr.append('<td> <a href="https://www.google.com/maps/search/?api=1&' + record.Location + '" target="_blank"><i class="lnr lnr-map-marker"></i> Trigger Spot</td>');
-						tr.append('<td> <a href="https://maps.google.com/?q=' + record.Location + '" target="_blank"><i class="lnr lnr-map-marker"></i> Trigger Spot</td>');
+                        tr.append('<td> <a href="https://maps.google.com/?q=' + record.Location + '" target="_blank"><i class="lnr lnr-map-marker"></i> Trigger Spot</td>');
                         tr.append('<td> <a href="patient-history.html" target="_blank"><i class="lnr lnr-book"></i> Patient History</td>');
                         tr.append('<td> <a href="https://form.jotform.me/92388803655468" target="_blank"><i class="lnr lnr-book"></i> Book Appointment</td>');
                         tr.append('<td><span class="emrStatus ' + record.Status + '">' + (record.Status === "red" ? "UnAddressed" : record.Status === "green" ? "Admitted" : record.Status === "yellow" ? "Picked" : "") + '</span></td>');
+                        tr.append('<td>' +
+                            (record.Status === "green" || record.Status === "" ?
+                                '<span class="del-button" data-toggle="modal" data-target="#confirmationModal" onclick="deleteClick(this)" data-case-id="' +
+                                record.caseId + '"><i class="lnr lnr-trash"" ></i></span>' : '') + '</td>');
                         table.append(tr);
                     });
+                } else {
+                    var tr = $('<tr />');
+                    table.append(tr);
+                    tr.append('<td colspan="9"> ---- No Records Found ---- </td>');
                 }
             });
         }
     </script>
 </body>
-<!--<tr style"padding:5px">
-    <td style="padding:0 40px 0 40px;"><b>92023</b></td>
-    <td style="padding:0 40px 0 40px;">John</td>
-    <td style="padding:0 40px 0 40px;">456-231-7089</td>
-    <td style="padding:0 40px 0 40px;">786-234-3421</td>
-    <td style="padding:0 40px 0 40px;">Block- 23-34, II lane, Hibuscus,Sydney</td>
-    <td style="padding:0 40px 0 40px;"><a href="https://www.google.com/maps/search/?api=1&query=-33.833457,151.028071" target="_blank">Location</a></td>
-    <td style="padding:0 40px 0 40px;background-color:green"><span style=""><b>Treatment Started</b></span></td>
-</tr>-->
+
 </html>
