@@ -52,10 +52,11 @@ app.get('/getusers', (req, res) => {
 });
 
 function getUserObjFromQueryString(qs) {
-
+  
     return {
-        caseId: parseInt(qs['caseId']),
-        userName: qs['userName'],
+        //caseId: parseInt(qs['caseId']),
+        caseId: qs['caseId'],
+        userName: qs['uName'],
         name: qs['name'],
         personalNumber: qs['number'],
         emergencyNumber: qs['emergencynum'],
@@ -79,14 +80,15 @@ app.get('/adduser', (req, res) => {
 
     var userData = getJsonData(usrJsonPath);
     var newUser = getUserObjFromQueryString(req.query);
-
+   // Console.log(newUser);
     if (isExistingUser(userData, newUser)) {
         res.send('User with Id already exists.');
     }
     else {
         userData.push(newUser);
         writeJsonData(usrJsonPath, userData);
-        res.send('User added successfully');
+        // res.send('User added successfully');
+        res.send('Ok');
     }
 });
 
@@ -142,18 +144,43 @@ app.get('/deleteuser', (req, res) => {
 });
 
 
-app.get('/getemployees', (req, res) => {
+app.get('/getemergencies', (req, res) => {
     res.send(getJsonData(emgJsonPath));
 });
 
 function getEmgObjFromQueryString(qs) {
+
     var qsObj = {
-        caseId: parseInt(qs['caseId']),
-        Location: qs['lat'] + ',' + qs['log'],
+        // caseId: parseInt(qs['caseId']),
+        caseId: qs['caseId'],
+        Location: qs['latitude'] + ',' + qs['longitude'],
+        Status: 'red'  //qs['stat']
+    };
+
+    var userObj = getUser(qsObj.caseId);
+   // console.log(userObj);
+    if (userObj) {
+
+        qsObj.name = userObj.name;
+        qsObj.personalNumber = userObj.personalNumber;
+        qsObj.emergencyNumber = userObj.emergencyNumber;
+        qsObj.Address = userObj.Address;
+    }
+
+    return qsObj;
+}
+
+function getUpdateEmgObjFromQueryString(qs) {
+
+    var qsObj = {
+        // caseId: parseInt(qs['caseId']),
+        caseId: qs['caseId'],
+        Location: qs['latitude'] + ',' + qs['longitude'],
         Status: qs['stat']
     };
 
     var userObj = getUser(qsObj.caseId);
+    // console.log(userObj);
     if (userObj) {
 
         qsObj.name = userObj.name;
@@ -207,30 +234,31 @@ app.get('/addemergency', (req, res) => {
     var newEmg = getEmgObjFromQueryString(req.query);
 
     var emgObj = getEmergency(emgData, newEmg.caseId);
-    console.log(emgObj);
+    //console.log(emgObj);
     if (emgObj) {
-        updateEmgStatus(emgData, newEmg);
-        writeJsonData(emgJsonPath, emgData);
-        res.send('Emergency Instance found, Updated Status.');
+       // updateEmgStatus(emgData, newEmg);
+        //writeJsonData(emgJsonPath, emgData);
+        res.send('Emergency Already Exists');
     }
     else {
         emgData.push(newEmg);
         writeJsonData(emgJsonPath, emgData);
-        res.send('Emergency recorded into our system successfully');
+        //res.send('Emergency recorded into our system successfully');
+        res.send('Ok');
     }
 });
 
 app.get('/updateemergency', (req, res) => {
 
     var emgData = getJsonData(emgJsonPath);
-    var newEmg = getEmgObjFromQueryString(req.query);
+    var newEmg = getUpdateEmgObjFromQueryString(req.query);
 
     var emgObj = getEmergency(emgData, newEmg.caseId);
 
     if (!emgObj) {
-        emgData.push(newEmg);
-        writeJsonData(emgJsonPath, emgData);
-        res.send('Emeregency request Not Found!!!, Added as new Emergency request');
+      //  emgData.push(newEmg);
+       // writeJsonData(emgJsonPath, emgData);
+        res.send('Emeregency request Not Found!!!');
     } else {
         updateEmgStatus(emgData, newEmg);
         writeJsonData(emgJsonPath, emgData);
@@ -263,7 +291,7 @@ app.get('/deleteemergency', (req, res) => {
     } else {
         deleteEmergency(emgData, newEmg);
         writeJsonData(emgJsonPath, emgData);
-        res.send('User deleted successfully!!!');
+        res.send('emergency deleted successfully!!!');
 
     }
 });

@@ -1,29 +1,29 @@
 [
-{
-		"caseId": 1,
-		"name": "John",
-		"personalNumber": 9515106046,
-		"emergencyNumber": 9765346124,
-		"Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-		"Location": "17.685353,83.201665",
-		"Status": "red"
-	},
-	{
-		"caseId": 2,
-		"name": "Eldin",
-		"personalNumber": 9515106046,
-		"emergencyNumber": 9765346124,
-		"Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-		"Location": "17.685353,83.201665",
-		"Status": "green"
-	},
-		{
-		"caseId": 3,
-		"name": "Chirs",
-		"personalNumber": 9515106046,
-		"emergencyNumber": 9765346124,
-		"Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-		"Location": "17.685353,83.201665",
-		"Status": "yellow"
-	}
+  {
+    "caseId": 1,
+    "name": "John",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
+    "Location": "17.685353,83.201665",
+    "Status": "red"
+  },
+  {
+    "caseId": 2,
+    "name": "Eldin",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
+    "Location": "17.685353,83.201665",
+    "Status": "green"
+  },
+  {
+    "caseId": 3,
+    "name": "Chirs",
+    "personalNumber": 9515106046,
+    "emergencyNumber": 9765346124,
+    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
+    "Location": "17.685353,83.201665",
+    "Status": "yellow"
+  }
 ]
