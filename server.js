@@ -170,6 +170,28 @@ function getEmgObjFromQueryString(qs) {
     return qsObj;
 }
 
+function getDeleteEmgObjFromQueryString(qs) {
+
+    var qsObj = {
+        // caseId: parseInt(qs['caseId']),
+        caseId: qs['caseId'],
+       // Location: qs['latitude'] + ',' + qs['longitude'],
+        Status: 'red'  //qs['stat']
+    };
+
+    //var userObj = getUser(qsObj.caseId);
+    //// console.log(userObj);
+    //if (userObj) {
+
+    //    qsObj.name = userObj.name;
+    //    qsObj.personalNumber = userObj.personalNumber;
+    //    qsObj.emergencyNumber = userObj.emergencyNumber;
+    //    qsObj.Address = userObj.Address;
+    //}
+
+    return qsObj;
+}
+
 function getUpdateEmgObjFromQueryString(qs) {
 
     var qsObj = {
@@ -281,7 +303,7 @@ function deleteEmergency(emgData, emgObj) {
 app.get('/deleteemergency', (req, res) => {
 
     var emgData = getJsonData(emgJsonPath);
-    var newEmg = getEmgObjFromQueryString(req.query);
+    var newEmg = getDeleteEmgObjFromQueryString(req.query);
 
 
     var emgObj = getEmergency(emgData, newEmg.caseId);
