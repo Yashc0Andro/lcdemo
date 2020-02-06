@@ -1,101 +1,283 @@
-[
-  {
-    "caseId": 1,
-    "name": "John",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "Color": "red"
-  },
-  {
-    "caseId": 2,
-    "name": "Eldin",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "location": "17.685353,83.201665",
-    "color": "green"
-  },
-  {
-    "caseId": 3,
-    "name": "Chirs",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "red"
-  },
-  {
-    "caseId": 4,
-    "name": "Adewale",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "red"
-  },
-  {
-    "caseId": 5,
-    "name": "David",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "yellow"
-  },
-  {
-    "caseId": 6,
-    "name": "Shwan",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "green"
-  },
-  {
-    "caseId": 7,
-    "name": "Rahul",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "green"
-  },
-  {
-    "caseId": 8,
-    "name": "Sridhar",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "green"
-  },
-  {
-    "caseId": 9,
-    "name": "Subodh",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "green"
-  },
-  {
-    "caseId": 10,
-    "name": "Teja",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "green"
-  },
-  {
-    "caseId": 11,
-    "name": "Bhanu",
-    "personalNumber": 9515106046,
-    "emergencyNumber": 9765346124,
-    "Address": "Block- 23-34, II lane, Hibuscus,Sydney",
-    "Location": "17.685353,83.201665",
-    "color": "green"
-  }
-]
+{
+	"Products": [{
+			"ProductId": "1",
+			"Name": "LINQ",
+			"Description": "The Reveal LINQ™ ICM System is an insertable cardiac monitor for infrequent symptoms or ongoing condition management.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/us-en/hcp/diagnostics/images/reveal-linq-product-page-image.png.transform/transformer-width-1000/image.png",
+			"Functionality": "ICM",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "2",
+			"Name": "Reveal XT",
+			"Description": "The Revea XT Insertable Cardiac Monitor (ICM) provides proven arrhythmia detection for up to 3 years and is MR Conditional at 3.0 and 1.5 Tesla with a 6-week post-insertion waiting period ",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/us-en/hcp/diagnostics/images/reveal-xt-icm-device-white-150x150-image.jpg",
+			"Functionality": "ICM",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "3",
+			"Name": "CareLink SmartSync Device Manager",
+			"Description": "CareLink SmartSync™ Device Manager is a secure, tablet-based device manager that enables BlueSync™ technology.SmartSync provides wireless programming combined with revolutionary portability and an intuitive design and enables a streamlined and secure digital workflow.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/hcp/images/smartsync-device.jpg",
+			"Functionality": "Monitoring",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "4",
+			"Name": "TYRX ABSORBABLE ANTIBACTERIAL ENVELOPE",
+			"Description": "The TYRX Absorbable Antibacterial Envelope is a fully absorbable antibacterial envelope for cardiac implantable electronic devices (CIEDs), including implantable cardioverter defibrillators (ICDs) and pacemakers. ",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/products/cardiac-rhythm/infection-control/images/TYRX_Cardiac_transparent-150x150.jpg",
+			"Functionality": "ICM",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "5",
+			"Name": "HEARTWARE HVAD SYSTEM",
+			"Description": "The world’s smallest centrifugal VAD now has the clinical evidence to prove its safety and effectiveness when used in a less-invasive thoracotomy approach.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/products/cardiac-rhythm/ventricular-assist-device/images/heartware-hvad-product-hero.png.transform/transformer-width-500/image.png",
+			"Functionality": "HEALTHCARE",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "6",
+			"Name": "CareLink SmartSync Device Manager",
+			"Description": "",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/xd-en/hcp/images/smartsync-device.jpg",
+			"Functionality": "SmartSync ",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "7",
+			"Name": "AZURE MRI SURESCAN PACEMAKERS",
+			"Description": "Azure is a completely redesigned pacemaker with BlueSync™ technology for secure1 wireless communication via Bluetooth® Low Energy without compromising longevity.2",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/01_crhf/brady/products/azure-mri-surescan-150x150.png",
+			"Functionality": "PacingSystem",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "8",
+			"Name": "ADVISA MRI SURESCAN PACEMAKERS",
+			"Description": "Advisa MRI SureScan pacing systems are approved for 1.5T and 3T full body MRI scans. Advisa DR is clinically proven to reduce the progression to permanent AF7. Additionally, the Advisa SR is the latest addition to the SureScan family.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/01_crhf/hf/products/brady-patient-advisa-can-with-leads-nobkgrd-150x150.png",
+			"Functionality": "PacingSystem",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "9",
+			"Name": "ATTESTA MRI SURESCAN PACEMAKERS",
+			"Description": "The Attesta pacemakers offers physiologic pacing (MVP & SAV+), 1.5T and 3T  full body MRI scanning, automaticity, and advanced therapeutic options.  ",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/01_crhf/brady/products/attesta-dr-right-150x150.png",
+			"Functionality": "PacingSystem",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "10",
+			"Name": "SPHERA  MRI SURESCAN PACEMAKERS",
+			"Description": "Sphera pacemakers offer physiologic pacing (SAV+), 1.5T and 3T full body MRI scanning and automaticity.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/01_crhf/brady/products/sphera-dr-right-150x150.png",
+			"Functionality": "PacingSystem",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "11",
+			"Name": "MICRA TRANSCATHETER PACING SYSTEM",
+			"Description": "Micra Transcatheter Pacing System (TPS) is the world’s smallest pacemaker 8 , delivered percutaneously via a minimally invasive approach, directly into the right ventricle without the use of leads.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/01_crhf/brady/products/brady-hcp-pacing-sys-micra-table150x150.png",
+			"Functionality": "PacingSystem",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "12",
+			"Name": "MRI SURESCAN™ PACING LEADS",
+			"Description": "Medtronic offers a choice of MRI pacemaker leads with proven performance for bradycardia therapy.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/01_crhf/brady/products/brady-pacing-leads-nobkgrd-150x150.png",
+			"Functionality": "PacingSystem",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "13",
+			"Name": "IMPLANTABLE CARDIOVERTER DEFIBRILLATORS (ICD)",
+			"Description": "Using the TruAF™ Detection Algorithm, Visia AF MRI™ and Visia AF™ are the only single chamber ICDs that can detect atrial fibrillation (AF) with a traditional lead.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/01_crhf/tachy/products/visia-af-mri-vr-mri-df4-leads-150x150.png",
+			"Functionality": "DEFIBRILLATORS",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "13",
+			"Name": "EVERA MRI ICD",
+			"Description": "Evera MRI ICDs are the first portfolio of ICDs to be approved for use in the MR environment, when MR conditions for use are met.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/01_crhf/tachy/products/evera-mri-dr-surescan-150x150.png",
+			"Functionality": "DEFIBRILLATORS",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "14",
+			"Name": "PRIMO MRI ICD",
+			"Description": "The Primo MRI ICD system includes SmartShock 2.0 Technology, the PhysioCurve design, and is approved for 1.5T and 3T MR conditional use, when MR conditions for use are met.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/01_crhf/tachy/products/PrimoMRI-image-150x150.png",
+			"Functionality": "DEFIBRILLATORS",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "15",
+			"Name": "MIRRO MRI ICD",
+			"Description": "The Mirro MRI ICD system includes the PhysioCurve design and is approved for 1.5T and 3T MR conditional use, when MR conditions for use are met.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/01_crhf/tachy/products/mirro-mri-dr-surescan-150x150.png",
+			"Functionality": "DEFIBRILLATORS",
+			"Category": "CARDIAC RHYTHM",
+			"SubCategory": "Cardiac Diagnostics & Monitoring"
+		},
+		{
+			"ProductId": "301",
+			"Name": "KYPHON BALLOON KYPHOPLASTY",
+			"Description": "The Kyphon Balloon Kyphoplasty platform is used to repair vertebral compression fractures (VCFs) by reducing and stabilizing the fractures.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/global/HCP/Images/sp_kyphon_kyphex-express-tip-3-150x150.jpg",
+			"Functionality": "vertebral compression",
+			"Category": "SPINAL & ORTHOPAEDIC",
+			"SubCategory": "Balloon Kyphoplasty"
+		},
+		{
+			"ProductId": "302",
+			"Name": "SYNCHROMED II INTRATHECAL PUMP",
+			"Description": "The SynchroMed II programmable, implantable pump delivers drug to the intrathecal space via an implanted catheter.",
+			"ImageUrl": "https://www.medtronic.com/content/dam/medtronic-com/products/neurological/drug-infusion-systems/images/tdd-synchromed-ii-hero-150.png",
+			"Functionality": "intrathecal",
+			"Category": "SPINAL & ORTHOPAEDIC",
+			"SubCategory": "Drug Infusion Systems for Chronic Pain"
+		},
+		{
+			"ProductId": "303",
+			"Name": "SYNCHROMED II DRUG INFUSION PUMP",
+			"Description": "The Medtronic SynchroMed II pump is part of the SynchroMed II programmable drug infusion system which provides precise drug delivery for chronic therapy for severe spasticity. In addition to the implanted pump, the SynchroMed II infusion system uses a catheter to deliver programmed amounts of Lioresal® Intrathecal (baclofen injection) (a muscle relaxant and antispasticity agent) directly to the intrathecal space and cerebrospinal fluid.",
+			"ImageUrl": "https://www.medtronic.com/content/dam/medtronic-com/professional/images/synchromedii-ampule.jpg",
+			"Functionality": "intrathecal",
+			"Category": "SPINAL & ORTHOPAEDIC",
+			"SubCategory": "Drug Infusion Systems for Severe Spasticity"
+		},
+		{
+			"ProductId": "304",
+			"Name": "AQUAMANTYS BIPOLAR SEALERS",
+			"Description": "Our Aquamantys bipolar sealers use proprietary Transcollation™ technology, combining radiofrequency (RF) energy and saline to provide hemostatic sealing of soft tissue and bone without the smoke or char found in other methods.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/products/general-surgery/electrosurgical/Aquamantys/images/aquamantys-6-0-150x150.jpg",
+			"Functionality": "hemostatic ",
+			"Category": "SPINAL & ORTHOPAEDIC",
+			"SubCategory": "Electrosurgical Products"
+		},
+		{
+			"ProductId": "305",
+			"Name": "PLASMABLADE SOFT TISSUE DISSECTION DEVICES",
+			"Description": "The PlasmaBlade offers the precision of a scalpel and the bleeding control of traditional electrosurgery without extensive collateral tissue damage.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/01_crhf/hf/products/ae-peak_pb_wpulsar-150x150.jpg",
+			"Functionality": "hemostatic ",
+			"Category": "SPINAL & ORTHOPAEDIC",
+			"SubCategory": "Electrosurgical Products"
+		},
+		{
+			"ProductId": "306",
+			"Name": "RADIALUX LIGHTED RETRACTORS(PENDING CE-MARK APPROVAL)",
+			"Description": "The RadiaLux lighted retractor is a single-use, cordless illumination device for breast and open abdominal procedures.",
+			"ImageUrl": "https://europe.medtronic.com/content/dam/medtronic-com/products/general-surgery/electrosurgical/lighted-retractors/radialux-lighted-retractor-product-menu-image.jpg",
+			"Functionality": "hemostatic ",
+			"Category": "SPINAL & ORTHOPAEDIC",
+			"SubCategory": "Electrosurgical Products"
+		},
+		{
+			"ProductId": "407",
+			"Name": "Emprint™ SX Ablation Platform with Thermosphere™ Technology",
+			"Description": "Gives you confidence in targeting accuracy with real-time 3-D ultrasound navigation.",
+			"ImageUrl": "https://www.medtronic.com/content/dam/covidien/library/us/en/product/ablation-systems/emprint-sx-ablation-platform-b.jpg",
+			"Functionality": "",
+			"Category": "GENERAL SURGERY ",
+			"SubCategory": "Ablation Systems"
+		},
+		{
+			"ProductId": "408",
+			"Name": "Cool-tip RF Ablation System E Series",
+			"Description": "Improves on the trusted Cool-tip™ RFA system with a simple, intuitive design and new safety features.",
+			"ImageUrl": "https://www.medtronic.com/content/dam/covidien/library/global/en/product/ablation-systems/cool-tip-rf-ablation-system-e-series-b.jpg",
+			"Functionality": "",
+			"Category": "GENERAL SURGERY",
+			"SubCategory": "Ablation Systems"
+		},
+		{
+			"ProductId": "409",
+			"Name": "Cool-tip RF Ablation System and Switching Controller",
+			"Description": "The first of its kind as the only “smart” RF system. ",
+			"ImageUrl": "https://www.medtronic.com/content/dam/covidien/library/global/en/product/ablation-systems/cool-tip-rf-ablation-system-b.jpg",
+			"Functionality": " ",
+			"Category": "GENERAL SURGERY",
+			"SubCategory": "Ablation Systems"
+		},
+		{
+			"ProductId": "510",
+			"Name": "DUREPAIR DURA REGENERATION MATRIX",
+			"Description": "Durepair™ Regeneration Matrix is a non-synthetic dura substitute used to repair defects in the dura.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/products/neurological/cranial-repair/images/durepair-sheet-hands-hero-image.jpg.transform/transformer-width-500/image.jpg",
+			"Functionality": "surgery ",
+			"Category": "CRANIAL REPAIR PRODUCTS",
+			"SubCategory": "Regeneration"
+		},
+		{
+			"ProductId": "610",
+			"Name": "Puritan Bennett 980 Ventilator Series",
+			"Description": "The Puritan Bennett 980 ventilator helps enable patients to breathe more naturally† through some of the most innovative breath delivery technology available.",
+			"ImageUrl": "https://www.medtronic.com/content/dam/covidien/library/emea/en/product/mechanical-ventilation/mechanical-ventilation-images/puritan-bennett-980-ventilator-b.jpg",
+			"Functionality": "ventilator  ",
+			"Category": "RESPIRATORY & MONITORING SOLUTIONS",
+			"SubCategory": "VENTILATION"
+		},
+		{
+			"ProductId": "710",
+			"Name": "Newport HT70 Plus Portable Ventilator",
+			"Description": "The Newport HT70 plus ventilator combines ruggedness, ease of use and clinical proficiency with exceptional mobility for patients from 5kg to adult. All models of the Newport™ HT70 ventilator family can be used for home care, transport, hospital, long-term care and emergency preparedness, as well as for invasive or noninvasive ventilation.",
+			"ImageUrl": "https://www.medtronic.com/content/dam/covidien/library/emea/en/product/mechanical-ventilation/mechanical-ventilation-images/ht70-gallery-5.jpg",
+			"Functionality": " ventilator",
+			"Category": "RESPIRATORY & MONITORING SOLUTIONS",
+			"SubCategory": "VENTILATION"
+		},
+		{
+			"ProductId": "810",
+			"Name": "INFUSE BONE GRAFT",
+			"Description": "InfuseTM Bone Graft contains a manufactured bone graft material that is approved by the U.S. Food and Drug Administration (FDA) for use in certain maxillofacial bone grafting procedures, such as sinus augmentation and localized alveolar ridge augmentation. It provides an alternative to bone-harvest surgery.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/us-en/hcp/therapies-conditions/spinal-orthopaedic/bone-grafting/images/bone-grafting-hcp-infuse-bone-graft-small.jpg",
+			"Functionality": "BOne",
+			"Category": "ORAL  MAXILLOFACIAL & DENTAL",
+			"SubCategory": "Bone Grafting"
+		},
+		{
+			"ProductId": "811",
+			"Name": "MASTERGRAFT GRANULES AND MINI GRANULES",
+			"Description": "Mastergraft Granules and Mini Granules are synthetic, osteoconductive, resorbable scaffolds that support new bone formation while remodeling. They may be used alone or in combination with autograft to provide a bone void filler that is resorbed/remodeled and is replaced by host bone during the healing process.",
+			"ImageUrl": "https://global.medtronic.com/content/dam/medtronic-com/us-en/hcp/therapies-conditions/spinal-orthopaedic/bone-grafting/images/bone-grafting-hcp-spine-mastergraft-granules.jpg",
+			"Functionality": "BOne ",
+			"Category": "ORAL  MAXILLOFACIAL & DENTAL",
+			"SubCategory": "Bone Grafting"
+		},
+		{
+			"ProductId": "912",
+			"Name": "Capnostream™ 20p Bedside Monitor with Apnea-Sat Alert Algorithm",
+			"Description": "The Capnostream™ 20p patient monitor is built on a legacy of proven performance. For nearly two decades, clinicians have relied on Microstream™ technology for an accurate, continuous view of ventilation adequacy on intubated and non-intubated patients, from neonate to adult. ",
+			"ImageUrl": "https://www.medtronic.com/content/dam/covidien/library/global/en/product/capnography-monitoring/banner-capnostream-20p.jpg",
+			"Functionality": "Patient Monitor",
+			"Category": "UROLOGICAL & UROGYNECOLOGICAL",
+			"SubCategory": "Bedside Monitor"
+		}
+
+	]
+}
