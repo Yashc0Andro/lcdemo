@@ -31,7 +31,7 @@ app.listen(port, function () {
     console.log("listening");
 });
 
-const products = 'productlist.json';
+const products = 'users.json';
 const emgJsonPath = 'emergency.json';
 var fs = require('fs');
 
